@@ -1,0 +1,195 @@
+.home {
+  display: flex;
+
+  background: url(../../images/pexels-pixabay-247676.jpg) no-repeat center
+    center/cover;
+
+  .left-side {
+    flex: 0.63;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+
+    .info {
+      height: auto;
+
+      width: 95%;
+      margin-bottom: 10%;
+
+      background: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 0 10px 0 rgba(224, 235, 249, 37);
+
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      .greetings {
+        width: 100%;
+        padding-left: 10%;
+
+        margin-top: 15px;
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+
+        font-size: 3rem;
+
+        color: #fff;
+        text-align: left;
+      }
+
+      .headings {
+        margin-bottom: 25px;
+
+        letter-spacing: 5px;
+        font-size: 4.5rem;
+
+        color: #ff971d;
+
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+      }
+
+      .outer-wrapper {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+
+        padding-left: 17%;
+
+        letter-spacing: 3px;
+
+        .i {
+          margin-right: 15px;
+          margin-bottom: 25px;
+
+          .am {
+            color: crimson;
+
+            font-size: 2.5rem;
+            font-family: "Roboto";
+            font-style: normal;
+          }
+        }
+
+        .ityped-cursor {
+          font-size: 2.5rem;
+
+          color: wheat;
+
+          opacity: 1;
+
+          -webkit-animation: blink 0.5s infinite;
+          -moz-animation: blink 0.5s infinite;
+          animation: blink 0.5s infinite;
+          animation-direction: alternate;
+        }
+
+        @keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-webkit-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-moz-keyframes blink {
+          100% {
+            opacity: 0;
+          }
+        }
+
+        .wrapper {
+          font-size: 2.5rem;
+          font-family: "Roboto";
+
+          color: white;
+
+          height: auto;
+        }
+      }
+    }
+
+    .buttons {
+      width: 90%;
+      height: 10%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      .button {
+        padding: 10px 35px;
+        border: 0px;
+        border-radius: 15px;
+
+        letter-spacing: 1px;
+        font-size: 1.25rem;
+
+        color: #ff971d;
+        background-color: #111f4d;
+
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: bold;
+        text-decoration: none;
+        font-weight: bolder;
+        text-decoration: none;
+        outline: none;
+
+        &:hover {
+          color: #111f4d;
+          background-color: #ff971d;
+          box-shadow: 0 0 5px #f9f9e0, 0 0 10px #ff971d, 0 0 15px #e43a19;
+
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+
+      .hire,
+      .github {
+        padding: 10px 55px;
+      }
+    }
+  }
+
+  .right-side {
+    flex: 0.37;
+    overflow: hidden;
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.25);
+
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(50px);
+
+      .picture {
+        height: 90vh;
+
+        border-radius: 15px;
+        box-shadow: 0 0 5px 0 rgba(224, 235, 249, 37);
+
+        object-fit: contain;
+      }
+    }
+  }
+}

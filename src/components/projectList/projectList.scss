@@ -1,0 +1,22 @@
+li {
+  width: 100%;
+  padding: 5px 0;
+
+  color: #ff971d;
+
+  text-align: center;
+
+  &:hover {
+    color: #fff;
+    background-color: rgb(245, 202, 123);
+
+    transition: all 0.3s ease;
+  }
+
+  &:active {
+    color: #111f4d;
+    background-color: #fff;
+
+    box-shadow: 0 0 5px #f9f9e0, 0 0 10px #e0ebf9, 0 0 15px #111f4d;
+  }
+}

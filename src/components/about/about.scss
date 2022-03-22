@@ -1,0 +1,77 @@
+.about {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+
+  .left-side {
+    flex: 0.25;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: wheat;
+
+    .my-story {
+      width: 90%;
+      height: auto;
+
+      font-size: 8rem;
+
+      color: #e43a19;
+
+      text-align: center;
+    }
+  }
+
+  .right-side {
+    flex: 0.75;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    background: rgba(255, 255, 255, 0.25);
+
+    padding-right: 5px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+
+    .story {
+      height: 95%;
+
+      padding: 0 25px;
+
+      font-size: 1.3rem;
+      line-height: 25px;
+      font-family: "Roboto";
+
+      // Paragraph properties
+
+      p {
+        padding-top: 12px;
+      }
+
+      p:first-child {
+        padding-top: 0;
+      }
+
+      // Scroll bar customizations
+      scroll-behavior: smooth;
+      overscroll-behavior: auto;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: wheat; /* color of the tracking area */
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #111f4d; /* color of the scroll thumb */
+        border-radius: 20px; /* roundness of the scroll thumb */
+      }
+    }
+  }
+}
