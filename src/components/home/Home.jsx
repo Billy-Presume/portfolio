@@ -1,6 +1,7 @@
 import "./home.scss";
 import { init } from "ityped";
 import { useEffect, useRef } from "react";
+import { PDFViewer } from "../../pdfViewer/pdfViewer";
 
 export default function Home() {
   const textRef = useRef();

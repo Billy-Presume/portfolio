@@ -1,0 +1,48 @@
+wheat
+
+/* HEX */
+#111f4d
+#e43a19
+#ff971d
+#f9f9e0
+#e0ebf9
+#fff
+#2ab7ca
+#f6cd61
+#fe8a71
+#fe9c8f • #feb2a8 • #fec8c1 • #fad9c1 • #f9caa7
+#ee4035 • #f37736 • #fdf498 • #7bc043 • #0392cf
+#96ceb4 • #ffeead • #ff6f69 • #ffcc5c • #88d8b0
+#4b3832 • #854442 • #fff4e6 • #3c2f2f • #be9b7b
+#008744 • #0057e7 • #d62d20 • #ffa700 • #ffffff
+#a8e6cf • #dcedc1 • #ffd3b6 • #ffaaa5 • #ff8b94
+#d11141 • #00b159 • #00aedb • #f37735 • #ffc425
+#fff6e9 • #ffefd7 • #fffef9 • #e3f0ff • #d2e7ff
+C • #eb6841 • #cc2a36 • #4f372d • #00a0b0
+
+/* RGBA */
+/* rgba(17, 31, 77, 0.97)
+rgba(255, 232, 214, 0.95)
+rgb(245, 202, 123)
+rgb(224, 235, 249) */
+
+/*
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+} */
+
+/* body::-webkit-scrollbar-track {
+  background: wheat;
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #111f4d;
+  border-radius: 20px;
+} 
+*/
+
