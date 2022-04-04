@@ -19,7 +19,14 @@ export default function Navbar() {
           <a href="#contact">Contact</a>
         </div>
         <div className="right-side">
-          <a href="_">Download Resume</a>
+          <a
+            href={require("./Billy Presume - Resume.pdf")}
+            download="Billy Presume - Resume"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Download Resume
+          </a>
         </div>
       </div>
     </div>

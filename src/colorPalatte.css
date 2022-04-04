@@ -2,7 +2,7 @@ wheat
 
 /* HEX */
 #111f4d
-#e43a19
+
 #ff971d
 #f9f9e0
 #e0ebf9
@@ -43,6 +43,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #111f4d;
   border-radius: 20px;
-} 
+}
 */
 

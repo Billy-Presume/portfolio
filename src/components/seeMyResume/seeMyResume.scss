@@ -1,0 +1,96 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .modal {
+      width: 80vw;
+      height: 97vh;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      z-index: 10;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+
+      .modalHeader {
+        height: 50px;
+        background: #111f4d;
+        overflow: hidden;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+
+        .heading {
+          margin: 0;
+          padding: 10px;
+          color: #ff971d;
+          font-weight: 500;
+          font-size: 27px;
+          text-align: center;
+        }
+      }
+
+      .modalContent {
+        width: 100%;
+        height: calc(100% - 50px);
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        overflow: hidden;
+
+        iframe {
+          // Scroll bar customizations
+          scroll-behavior: smooth;
+          overscroll-behavior: auto;
+
+          &::-webkit-scrollbar {
+            width: 10px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: wheat; /* color of the tracking area */
+            border-radius: 10px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #111f4d; /* color of the scroll thumb */
+            border-radius: 20px; /* roundness of the scroll thumb */
+          }
+        }
+      }
+    }
+
+    .closeBtn {
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 5px;
+      border: none;
+      font-size: 16px;
+      color: white;
+      background: #e43a19;
+      transition: all 0.25s ease;
+
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &:hover {
+        font-size: 18px;
+        color: #111f4d;
+        background: #fff;
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+      }
+    }
+  }
+}

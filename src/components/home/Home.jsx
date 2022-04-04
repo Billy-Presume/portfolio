@@ -1,20 +1,26 @@
 import "./home.scss";
 import { init } from "ityped";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import SeeMyResume from "../seeMyResume/SeeMyResume";
+import { render } from "@testing-library/react";
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const showModal = () => {
+    setIsOpen(true);
+    render(<div>{isOpen && <SeeMyResume setIsOpen={setIsOpen} />}</div>);
+  };
   const textRef = useRef();
+
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
       strings: [
-        "Full-Stack Web Developer",
-        "Software Engineer",
+        "Web & Mobile Developer",
         "Video Editor",
         "Photographer",
-        "Writer",
         "Tennis player",
       ],
     });
@@ -38,7 +44,9 @@ export default function Home() {
         <div className="buttons">
           <button className="button github">My GitHub</button>
           <button className="button hire">Hire me</button>
-          <button className="button resume">See my resume</button>
+          <button className="button resume" onClick={showModal}>
+            See my resume
+          </button>
         </div>
       </div>
       <div className="right-side">
