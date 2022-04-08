@@ -42,8 +42,23 @@ export default function Home() {
           </div>
         </div>
         <div className="buttons">
-          <button className="button github">My GitHub</button>
-          <button className="button hire">Hire me</button>
+          <button
+            className="button github"
+            onClick={(e) => {
+              window.open("https://github.com/Billy-Presume", "_blank");
+            }}
+          >
+            My GitHub
+          </button>
+          <button
+            className="button hire"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = "#contact";
+            }}
+          >
+            Hire me
+          </button>
           <button className="button resume" onClick={showModal}>
             See my resume
           </button>
