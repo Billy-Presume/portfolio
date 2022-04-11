@@ -1,17 +1,16 @@
 import "./home.scss";
 import { init } from "ityped";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import SeeMyResume from "../seeMyResume/SeeMyResume";
 import { render } from "@testing-library/react";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
+  const isOpen = true;
   const showModal = () => {
-    setIsOpen(true);
-    render(<div>{isOpen && <SeeMyResume setIsOpen={setIsOpen} />}</div>);
+    render(<div id="modalShow">{isOpen && <SeeMyResume />}</div>);
   };
-  const textRef = useRef();
 
+  const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
