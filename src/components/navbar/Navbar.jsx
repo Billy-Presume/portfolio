@@ -1,6 +1,11 @@
 import "./navbar.scss";
 
 export default function Navbar() {
+  const imageOnclick = (e) => {
+    e.preventDefault();
+    window.location.href = "#home";
+  };
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -9,6 +14,7 @@ export default function Navbar() {
             src={require("../../images/IMG-8974.jpg")}
             alt="profile"
             className="profile-pic"
+            onClick={imageOnclick}
           />
         </div>
         <div className="middle">
@@ -20,12 +26,13 @@ export default function Navbar() {
         </div>
         <div className="right-side">
           <a
-            href={require("./Billy Presume - Resume.pdf")}
+            className="btn"
+            href={require("../../assets/resume.pdf")}
             download="Billy Presume - Resume"
             rel="noopener noreferrer"
             target="_blank"
           >
-            Download Resume
+            Resume &nbsp;<i class="fa fa-download"></i>
           </a>
         </div>
       </div>

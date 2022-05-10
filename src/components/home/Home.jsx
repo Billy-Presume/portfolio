@@ -10,6 +10,16 @@ export default function Home() {
     render(<div id="modalShow">{isOpen && <SeeMyResume />}</div>);
   };
 
+  const hireMeOnClick = (e) => {
+    e.preventDefault();
+    window.location.href = "#contact";
+  };
+
+  const myStoryOnCLick = (e) => {
+    e.preventDefault();
+    window.location.href = "#about";
+  };
+
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
@@ -49,17 +59,11 @@ export default function Home() {
           >
             My GitHub
           </button>
-          <button
-            className="button hire"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = "#contact";
-            }}
-          >
+          <button className="button hire" onClick={hireMeOnClick}>
             Hire me
           </button>
           <button className="button resume" onClick={showModal}>
-            See my resume
+            View resume
           </button>
         </div>
       </div>
@@ -69,6 +73,7 @@ export default function Home() {
             src={require("../../images/IMG-8974.jpg")}
             alt=""
             className="picture"
+            onClick={myStoryOnCLick}
           />
         </div>
       </div>

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1b619d7c.css",
+    "main.js": "/static/js/main.4742f77d.js",
+    "static/media/Vector_2727.jpg": "/static/media/Vector_2727.b0725097fc85d159848d.jpg",
+    "static/media/IMG-8974.jpg": "/static/media/IMG-8974.4680cb5e638383b7bb73.jpg",
+    "static/media/pexels-pixabay-247676.jpg": "/static/media/pexels-pixabay-247676.995c6b82a8c7d1ae8029.jpg",
+    "static/media/pexels-ezequiel-da-silva-2902536.jpg": "/static/media/pexels-ezequiel-da-silva-2902536.8a26f54532230cf40a5b.jpg",
+    "static/media/resume.pdf": "/static/media/resume.ec8bca60cdc218062e10.pdf",
+    "static/media/dark-hexagonal-background-with-gradient-color.jpg": "/static/media/dark-hexagonal-background-with-gradient-color.1a9eb7191292f84deaa9.jpg",
+    "static/media/i-mail-man.webp": "/static/media/i-mail-man.0eb3b3f370b1307f11a1.webp",
+    "index.html": "/index.html",
+    "main.1b619d7c.css.map": "/static/css/main.1b619d7c.css.map",
+    "main.4742f77d.js.map": "/static/js/main.4742f77d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b619d7c.css",
+    "static/js/main.4742f77d.js"
+  ]
+}

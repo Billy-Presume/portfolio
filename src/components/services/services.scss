@@ -28,7 +28,7 @@
       width: 85%;
       height: 75%;
       padding: 20px;
-      border-radius: 7px;
+      border-radius: 8px;
 
       .first-row,
       .second-row {
@@ -41,35 +41,49 @@
         width: 95%;
         height: 50%;
         padding: 5px;
-        border-radius: 7px;
+        border-radius: 8px;
 
         .cards {
           display: flex;
           flex-direction: column;
           align-items: center;
 
-          background-color: #ff971d;
-
           width: 30%;
           height: 90%;
           padding: 8px;
-          border-radius: 7px;
+          border-radius: 8px;
+          background-color: #fff;
+          // background-color: #f8ecec;
+
+          &:hover {
+            background-color: #f8ecec;
+
+            .card-title {
+              color: dodgerblue;
+            }
+
+            .card-content {
+              background-color: rgba(1, 1, 1, 0.1);
+            }
+          }
 
           .card-title {
+            text-align: center;
             font-size: 1.5rem;
-            padding-top: 3px;
-            color: #d11141;
+            padding: 8px 12px 0px 12px;
+            color: #00a0b0;
           }
 
           .card-content {
             text-align: center;
-            font-size: 1.1rem;
-            margin-top: 0.8rem;
-            padding: 8px;
-            border-radius: 7px;
-            color: #111f4d;
-
-            background-color: rgba(1, 1, 1, 0.03);
+            font-size: 1.2rem;
+            margin-top: 0.3rem;
+            padding: 12px;
+            border-radius: 8px;
+            color: #111;
+            background-color: rgba(1, 1, 1, 0.05);
+            // backdrop-filter: blur(50px);
+            // -webkit-backdrop-filter: blur(50px);
           }
         }
       }

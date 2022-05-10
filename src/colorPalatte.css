@@ -46,3 +46,40 @@ body::-webkit-scrollbar-thumb {
 }
 */
 
+/* For Desktop View */
+  @media screen and (min-width: 1024px) and (max-device-width: 1440px) {
+}
+
+/* For Tablet View */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+}
+
+
+ {/* Slider main container */}
+        <div class="swiper">
+          {/* Additional required wrapper */}
+          <div class="swiper-wrapper">
+            {/* Slides --> */}
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            ...
+          </div>
+          {/* If we need pagination */}
+          <div class="swiper-pagination"></div>
+
+          {/* If we need navigation buttons */}
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          {/* If we need scrollbar */}
+          <div class="swiper-scrollbar"></div>
+        </div>
