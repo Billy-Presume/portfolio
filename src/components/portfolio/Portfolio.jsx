@@ -1,13 +1,13 @@
 import "./portfolio.scss";
-// Import Swiper React components
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-// import required modules
-import { Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import "swiper/scss";
+import "swiper/scss/navigation";
+import "swiper/scss/pagination";
 
 import "./styles.css";
 
@@ -19,21 +19,30 @@ export default function Portfolio() {
       </div>
       <div className="bottom">
         <Swiper
-          pagination={{
-            type: "fraction",
-          }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={10}
+          slidesPerView={2}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
           className="mySwiper"
         >
           <SwiperSlide className="swiper-slide" id="s1">
-            Slide 1
+            This slide will soon be filled with content. <br /> This website is
+            currently under construction.
           </SwiperSlide>
           <SwiperSlide className="swiper-slide" id="s2">
-            Slide 2
+            This slide will soon be filled with content. <br /> This website is
+            currently under construction.
           </SwiperSlide>
           <SwiperSlide className="swiper-slide" id="s3">
-            Slide 3
+            This slide will soon be filled with content. <br /> This website is
+            currently under construction.
+          </SwiperSlide>
+          <SwiperSlide className="swiper-slide" id="s4">
+            This slide will soon be filled with content. <br /> This website is
+            currently under construction.
           </SwiperSlide>
         </Swiper>
       </div>

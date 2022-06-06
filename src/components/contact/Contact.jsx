@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="main-container">
-        <h1>Contact Me</h1>
+        <h1>Contact me</h1>
         <div className="contact-form-container">
           {/* Contact information card */}
           <div className="contact-info">
@@ -122,7 +122,14 @@ export default function Contact() {
                     cols="43"
                   ></textarea>
                   {/* Submit button */}
-                  <div className="submitButton">
+                  <div
+                    className="submitButton"
+                    onClick={() => {
+                      alert(
+                        "Sorry, this website is still under construction! \nThis button does not work yet."
+                      );
+                    }}
+                  >
                     <span>Send </span>
                   </div>
                 </div>

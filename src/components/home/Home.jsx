@@ -1,37 +1,48 @@
 import "./home.scss";
 import { init } from "ityped";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SeeMyResume from "../seeMyResume/SeeMyResume";
 import { render } from "@testing-library/react";
 
 export default function Home() {
+  //
+  const firstUpdate = useRef(true);
+  useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      window.onload = function () {
+        alert("This website is currently under construction!");
+      };
+    }
+    console.log("Not the first update");
+  });
+
+  // Render modal containing resume
   const isOpen = true;
   const showModal = () => {
     render(<div id="modalShow">{isOpen && <SeeMyResume />}</div>);
   };
 
+  // Scroll to contact me section
   const hireMeOnClick = (e) => {
     e.preventDefault();
     window.location.href = "#contact";
   };
 
+  // Scroll to about section
   const myStoryOnCLick = (e) => {
     e.preventDefault();
     window.location.href = "#about";
   };
 
+  // iTyped cursor initialization
   const textRef = useRef();
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: [
-        "Web & Mobile Developer",
-        "Video Editor",
-        "Photographer",
-        "Tennis player",
-      ],
+      strings: ["Software Engineer", "Web & Mobile Developer", "Video Editor"],
     });
   }, []);
 
@@ -68,14 +79,12 @@ export default function Home() {
         </div>
       </div>
       <div className="right-side">
-        <div className="image-container">
-          <img
-            src={require("../../images/IMG-8974.jpg")}
-            alt=""
-            className="picture"
-            onClick={myStoryOnCLick}
-          />
-        </div>
+        <img
+          src={require("../../images/IMG-8974.jpg")}
+          alt=""
+          className="picture"
+          onClick={myStoryOnCLick}
+        />
       </div>
     </div>
   );

@@ -1,54 +1,37 @@
-.navbar {
-  align-items: center;
-  justify-content: space-evenly;
+nav {
+  width: 100%;
+  height: 55px;
+  display: flex;
   position: fixed;
   z-index: 2;
-  width: 100%;
 
   .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
+    width: 100%;
     height: 55px;
-    padding: 2px 0;
+    display: flex;
+
     background-color: #111f4d;
 
-    .left-side {
+    .left,
+    .middle,
+    .right {
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .left {
+      flex: 0.15;
+      display: flex;
 
       .profile-pic {
-        width: 50px;
-        height: 50px;
+        width: 48px;
+        height: 48px;
         border-radius: 100%;
         object-position: 60% 40%;
         object-fit: cover;
-      }
-    }
-
-    .middle {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      height: auto;
-      padding: 7px;
-
-      a {
-        font-weight: bold;
-        text-decoration: none;
-        font-weight: bold;
-        text-decoration: none;
-        font-family: "Roboto";
-        font-size: 1.24rem;
-        margin: 0 10px;
-        padding: 8px 30px;
-        letter-spacing: 2px;
-        color: white;
 
         &:hover {
-          border-radius: 10px;
           transition: all 0.1s ease;
           box-shadow: 0 0 10px white;
           color: #e43a19;
@@ -57,25 +40,52 @@
       }
     }
 
-    .right-side {
+    .middle {
+      display: flex;
+      flex: 0.7;
+
+      .section-list {
+        width: 100%;
+        padding: 7px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        li {
+          font-family: "Roboto";
+          font-size: 20px;
+          margin: 0 10px;
+          padding: 8px 30px;
+          letter-spacing: 3px;
+          color: white;
+
+          &:hover {
+            border-radius: 10px;
+            transition: all 0.1s ease;
+            box-shadow: 0 0 10px white;
+            color: #e43a19;
+            background-color: wheat;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 0.15;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: auto;
-      padding: 7px;
 
       /* Style buttons */
-      .btn {
+      a {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
         text-decoration: none;
         border: none;
-        color: white;
         color: #fffef9;
         background-color: RoyalBlue;
 
-        font-weight: 300;
         font-size: 20px;
         padding: 8px 25px;
         border-radius: 8px;
@@ -88,6 +98,98 @@
           box-shadow: 0 0 5px #f9f9e0, 0 0 10px #e0ebf9, 0 0 15px #111f4d;
         }
       }
+    }
+  }
+
+  /* For Desktop View */
+  @media screen and (min-width: 1024px) and (max-device-width: 1440px) {
+  }
+
+  /* For Tablet View */
+  @media screen and (max-device-width: 1023px) {
+    width: 45%;
+    height: 70%;
+    right: 0;
+    flex-direction: column;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+
+      .left,
+      .middle,
+      .right {
+        height: fit-content;
+        flex-direction: column;
+      }
+
+      .left {
+        flex: 0.2;
+        background-color: #e0ebf9;
+
+        .profile-pic {
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+          object-position: 60% 40%;
+          object-fit: cover;
+
+          &:hover {
+            transition: all 0.1s ease;
+            box-shadow: 0 0 10px white;
+            color: #e43a19;
+            background-color: wheat;
+          }
+        }
+      }
+
+      .middle {
+        flex-direction: column;
+
+        .section-list {
+          width: 100%;
+          flex-direction: column;
+          justify-content: space-between;
+
+          li {
+            font-family: "Roboto";
+            font-size: 20px;
+            padding: 15px 0;
+            letter-spacing: 3px;
+            color: white;
+
+            &:hover {
+              border-radius: 10px;
+              transition: all 0.1s ease;
+              box-shadow: 0 0 10px white;
+              color: #e43a19;
+              background-color: wheat;
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 0.1;
+
+        background-color: #f9f9e0;
+      }
+    }
+    button {
+      width: 25px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      font-size: 10px;
+      padding: 5px 5px;
+      border-radius: 50%;
+
+      background-color: RoyalBlue;
     }
   }
 }
